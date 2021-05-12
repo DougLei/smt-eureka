@@ -1,0 +1,11 @@
+server:
+  port: 20000
+  
+
+eureka:
+  client:
+    register-with-eureka: false # 注册中心不需要注册自己
+    fetch-registry: false  # 注册中心不需要发现服务
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/  # 注册中心的url地址, 其他服务在注册的时候, 必须指定该地址
+    
